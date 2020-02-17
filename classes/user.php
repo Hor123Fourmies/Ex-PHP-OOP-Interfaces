@@ -6,7 +6,7 @@
  * Time: 11:18
  */
 
-require('interfaces/user.interface.php');
+//require('interfaces/user.interface.php');
 
 class user implements userInterface
 {
@@ -18,7 +18,15 @@ class user implements userInterface
         $this->getRequest($_REQUEST);
     }
 
+    public function getRequest($request)
+    {
+        $this->request = $request;
+    }
 
+    public function parseRequest()
+    {
+        return $this->getRequest();
+    }
 
 
 }
