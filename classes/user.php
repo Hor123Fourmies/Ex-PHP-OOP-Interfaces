@@ -25,7 +25,7 @@ class user implements userInterface
 
     public function parseRequest()
     {
-        return $this->getRequest();
+        return $this->request;
     }
 
 
